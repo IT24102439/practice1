@@ -22,6 +22,11 @@ const itemSchema = new mongoose.Schema(
       required: [true, "Description is required"],
       trim: true,
     },
+    serialNumber: {
+      type: Number,
+      required: [true, "Serial Number is required"],
+      min: [0, "Serial Number cannot be negative"],
+    },
     imageUrl: {
       type: String,
       default: "",
